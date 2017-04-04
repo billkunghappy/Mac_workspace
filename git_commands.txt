@@ -1,0 +1,82 @@
+git指令
+
+git init
+	/在資料夾中初始化git repository
+
+git status
+	/檢查git repository 狀態
+
+git add
+	/把檔案加入git repository
+
+git commit -m""
+	/commit changes然後輸入更改訊息
+
+git log
+	/check commit messege
+
+git remote add origin https://......
+	/remote to a gihub repository 
+	origin	是remote name
+	下次要指定這個遠端儲存庫時（github)只要直接輸入remote name 即可
+	https://......是你的github網址
+
+git remote 
+	/可以看到所連結到的所有遠端儲存庫
+
+git push 
+	/push changes to github
+	若使用git push -u origin(遠端儲存庫名) master（branch name)
+	下次使用git push 將直接push到 origin master
+
+git pull origin master
+	/抓下遠端儲存庫（origin）的 master branch 檔案
+
+git diff HEAD
+	/比較目前位置與repository的差別
+git diff master
+	/比較目前位置與Ｍaster的差別
+git diff bill_branch
+	/比較目前位置與bill_branch的差別
+git diff --stage 
+	/確認剛剛在本地端做出的修改
+
+git reset file_name
+	/把剛才add的檔案unstage
+
+git checkout --file_name
+	/把file還原到上次commit時的狀態
+
+git branch branch_name
+	/create new branch
+git branch
+	/check branches
+git branch -d branch_name
+	/delete branch
+
+git checkout branch_name
+	/切換到另一個branch
+
+git rm file_name
+	/刪除檔案
+
+git merge branch_name
+	/把branch merge 進來
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
