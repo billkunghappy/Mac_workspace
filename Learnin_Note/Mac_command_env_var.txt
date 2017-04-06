@@ -1,0 +1,6 @@
+Mac command env var
+
+USER >> the name of current user
+PS1  >> command prompt 預設是$
+PATH >> 系統基本函式的提取路徑
+HOME >> home directory

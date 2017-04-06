@@ -1,0 +1,132 @@
+Mac terminal 指令
+
+man command_name
+	/check how to use this command
+
+clear
+	/clear the terminal
+
+history
+	/check terminal history
+
+env 
+	/check your environmentenv
+
+*若指令中有特殊字符，可以選擇用“”直接括起來
+*tab很強
+
+
+路徑指令
+	pwd
+		顯示當前之絕對路徑
+
+	ls
+		顯示當前目錄內容
+		-a
+			顯示隱藏檔案，-A不會顯示.和..
+		-l
+			list files in LONG format
+		-t
+			list files order by edit time
+		-alt or -atl or -tal ......
+			一次綜合以上三種功能
+
+	cd
+		跳到另一個資料夾
+
+	＊若直接輸入路徑 即為相對路徑
+		ＥＸ.workspace
+	＊若在輸入路徑前加/ 即為絕對路徑
+		ＥＸ./Users/billkung/Documents/workspace
+	.  指當前資料夾
+	.. 指父資料夾
+		ＥＸ.若要跳回父資料夾，使用cd ..
+
+顯示隱藏資料指令
+	ls -lA
+
+
+處理檔案指令
+	mkdir directory_name
+		在當前位置創造一個directory
+
+	touch bill.txt
+		在當前位置創造一個bill.txt檔案
+
+	cp file_name
+		copy files
+	cp file_name file_name ....(可以多個) directory
+		把前面數個file直接複製貼上到最後的directory
+	cp * directory_name
+		把當前資料夾所有檔案複製到dirctory_name裡
+	cp m*.txt directory_name
+		把當前資料夾中所有m開頭的txt檔複製到directory_name裡
+
+	mv file_name  directory_name
+		將檔案移動至directory
+	mv file_name  new_file_name
+		將檔案改名
+
+	rm file_name
+		永久刪除file
+	rm -r directory_name
+		永久刪除directory及其子文件
+
+
+輸入輸出指令
+	echo "hello"
+		在terminal中output "hello"
+	echo "hello" > hello.txt
+		在hello.txt中standard output "hello"
+
+
+
+
+管理文件指令
+	cat 路徑檔案
+		這個指令會顯示路徑檔案的內容
+
+	cat ../textOne.txt > textTwo.txt
+		會把 textOne.txt 內容覆蓋到 textTwo.txt 
+
+	cat ../textOne.txt >> textTwo.txt
+		會把 textOne.txt 加到 textTwo.txt 的結尾
+
+	cat < bill.txt
+		standard input bill.txt的內容到terminal中
+
+	cat bill.txt | wc
+		| 是 pipe ，是把｜前的output變成｜右邊的input
+		而這裡的wc是輸出行數，字數及字母數
+
+		bill.txt >> wc >> wc's output
+
+	cat bill.txt | wc | cat > new.txt
+		| pipe可以連續使用，這裡表示將bill.txt的輸出輸入到wc後再把wc的輸出覆蓋（>）到new.txt
+
+	*special function*
+		sort 將文件內容排序
+		uniq 將輸入內容的重複部分刪除後輸出
+
+	grep Bill file.txt
+		grep是搜尋字串功能，以上述例子，將顯示出file.txt中所有包含Ｂill字串（不管大小寫）的內容
+
+	grep -R Bill directory_name
+		grep -R搜尋所有在directory中  內容或名稱  包含Ｂill字串的檔案並顯示出來
+	
+	grep -Rl Bill directory_name
+		grep -R搜尋所有在directory中  only名稱  包含Ｂill字串的檔案並顯示出來
+
+	sed 's/searchString/replaceString/' file_name
+		搜尋file_name  每一行  的  第一個  searchString並全部代換成replaceString 然後輸出
+
+	sed 's/searchString/replaceString/g' file_name
+		搜尋file_name         的  每一個  searchString並全部代換成replaceString 然後輸出，這裡的g是指global，指全部
+
+
+
+
+
+
+
+

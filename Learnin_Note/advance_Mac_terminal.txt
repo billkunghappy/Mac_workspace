@@ -1,0 +1,52 @@
+advance_Mac_terminal
+
+nano
+nano是一個能在terminal中使用的text editor，但只接受文字輸入
+	
+	nano hello.txt
+	\\create a new file name hello.txt, then enter the nano editor
+	<<In nano editor>>
+		Ctrl + O
+		\\save file,O stand for output
+		Ctrl + X
+		\\exit the nano editor
+		Ctrl + G
+		\\Opens a help menu
+
+
+	nano ~/.bash_profile
+	\\創造一個隱藏的環境設定檔案
+	ＥＸ.
+		nano ~/.bash_profile
+		<<in nano editor>>
+			echo "Hello Bill!"
+			Ctrl + O
+			press enter
+			Ctrl + X 
+
+		<<back to terminal>>
+		source ~/.bash_profile
+		\\直接讀出 ~/.bash_profile 的設定
+		\\source 或. 都是直接把剛做修改的環境設定讀進當前terminal中
+
+
+
+
+	<<nano editor中的指令>>
+		alias 
+		\\別名功能
+		EX.
+			alias pd="pwd"
+		則當你下次在使用terminal時，輸入pd及等於輸入pwd，會顯示出當前絕對路徑
+
+		export 
+		\\定義廣義變數（通用於所有子文件）
+		EX.
+			export user="bill"
+
+		當你想在terminal中使用user變數時，使用$user即可
+
+
+
+
+
